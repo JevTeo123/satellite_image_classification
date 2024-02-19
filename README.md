@@ -21,9 +21,9 @@ The purpose of this project is to classify images taken from a satellite into 4 
 # Getting Started
 Before getting started on the creation of the CNN model, we first have to load the images that are provided for us into a format suitable for the model to make predictions on.
 
-Firstly, data has to be loaded from directory that contains all of our images. By using the code below, we are able to load the images from our data folder into a ```py tf.data.Dataset``` format.
+Firstly, data has to be loaded from directory that contains all of our images. By using the code below, we are able to load the images from our data folder into a ```tf.data.Dataset``` format.
 ```py 
-data = tf.keras.utils.image_dataset_from_directory("data")```
+data = tf.keras.utils.image_dataset_from_directory("data")
 ```
 # Preprocess Data
 ## Data Normalizaton
