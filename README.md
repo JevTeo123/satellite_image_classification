@@ -112,6 +112,7 @@ model.add(Dense(256, activation = "relu"))
 model.add(Dense(4, activation = "softmax")) (# softmax activation for multiclass)
 model.compile("adam", loss = "sparse_categorical_crossentropy", metrics = ["accuracy"]) (#sparse_categorical crossentropy for multiclass classification)
 ```
+Final Accuracy for our CNN:
 | Train Accuracy | Validation Accuracy |
 | :---: | :---: |
 | 0.945 | 0.955 |
