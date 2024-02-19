@@ -43,6 +43,7 @@ test_size = int(len(data) *.1) + 1 (# 10 percent for testing)
 train = data.take(train_size)
 test = data.take(test_size)
 val = data.take(val_size)
+```
 
 # Building Deep Learning Model
 
