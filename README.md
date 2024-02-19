@@ -95,7 +95,7 @@ Types of Padding:
 ### Fully Connected Layer (Dense Layer)
 - Connect every neuron in one layer to all the neurons in the output layer.
 
-## Implementation of CNN into our project
+## Implementation of CNN in our project
 ```py
 model.add(Conv2D(16, (3, 3), 1, activation = "relu", input_shape = (256, 256, 3)))
 model.add(MaxPooling2D())
