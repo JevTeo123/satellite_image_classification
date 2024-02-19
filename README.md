@@ -46,7 +46,68 @@ val = data.take(val_size)
 ```
 
 # Building Deep Learning Model
+After Preprocessing of data is done, it is time to build the convulational neural network for image classification. 
 
+## What is CNN and how does it work?
+CNNs is a feed forward neural network as the information moves from one layer to the next.
+Layers in CNN:
+1. Convulational Layer (Input Layer)
+2. ReLu Layer (Hidden Layer)
+3. Pooling Layer (Hidden Layer)
+4. Normnalization Layer (Hidden Layer)
+5. Fully Connected Layer aka. Dense Layer (Hidden Layer)
+6. Sigmoid/ Softmax Layer (Output Layer)
+
+### Convulational Layer
+Extracts features from an input image. Uses a matrix filter to go along the pixels of an image to extract out any patterns that may be available in an image. Convolution is a mathematical operation that happens between two matrices to form a third matrix as an output aka convoluted matrix.
+
+Arguments:
+  - Filters: The number of feature detectors
+  - Kernel_size: The shape of the feature detector
+  - Strides: Controls how many units the filter would shift
+  - Input Shape: Standardizes the shape of the image into the neural network
+  - Padding: Used to control the dimensionality of the convolved feature with respect to the input filters
+Filters
+  - Helps in finding out edges, curves and details like height width etc.
+  - Slides over images to extract different components or patterns of an image
+  - First filters learns to extract ou simple features in initial convulated layers however, it learns to extract out significantly more complex features later on.
+  - Rotate this filter over an input matrix and get an output of lesser dimension
+
+### Padding
+After a filter is applied, it results in an output of lesser dimension. This may be a problem it may lead to information loss from the edges and corners of the images. To preserve the information from the edges and corners, padding can be used.
+Types of Padding:
+- Zero Padding: Pad the images with zeros so that information at the edges and corners are not lost
+- Valid Padding: Drop the part of the image where the filter does not fit, however, this is dangerous as we might lose valuable data from the images
+
+### ReLu Layer:
+- Increase the complexity of the neural network by introducing non-linearity into the ConvNets.
+- Performs element-wise operation and set negative pixels to zero.
+### Pooling Layer:
+- Added after the convulational layer.
+- Output of convulational layer acts as input for pooling layer
+- Pooling down samples the data reducing dimensionality by retaining important information
+- Does further feature extraction and detects multiple components of images like edges and corners
+
+### Fully Connected Layer (Dense Layer)
+- Connect every neuron in one layer to all the neurons in the output layer.
+
+Code used to create our CNN model:
+```py
+model.add(Conv2D(16, (3, 3), 1, activation = "relu", input_shape = (256, 256, 3)))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(32, (3, 3), 1, activation = "relu"))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(64, (3, 3), 1, activation = "relu"))
+model.add(MaxPooling2D())
+
+model.add(Flatten())
+
+model.add(Dense(256, activation = "relu"))
+model.add(Dense(4, activation = "softmax")) (# softmax activation for multiclass)
+model.compile("adam", loss = "sparse_categorical_crossentropy", metrics = ["accuracy"]) (#sparse_categorical crossentropy for multiclass classification)
+```
 
 
 
