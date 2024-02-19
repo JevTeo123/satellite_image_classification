@@ -4,8 +4,12 @@
   1. [About The Project](#about-the-project) 
         - [Built With](#built-with)
   2. [Getting Started](#getting-started)
-  3. [Preprocess Data](#preprocess-data)
-  4. [Build a Convolutional Neural Network for image classification](#build-cnn-model)
+        - [Data Normalization](#data-normalization)
+        - [Train Test Split](#train-test-split)
+  4. [Preprocess Data](#preprocess-data)
+  5. [Building Deep Leearning Model](#building-deep-learning-model)
+        - [What is CNN and how does it work?](#what-is-cnn-and-how-does-it-work)
+        - [Implementation of CNN in our project](#implementation-of-cnn-in-our-project)
 </details>
 
 # About The Project
@@ -91,7 +95,7 @@ Types of Padding:
 ### Fully Connected Layer (Dense Layer)
 - Connect every neuron in one layer to all the neurons in the output layer.
 
-Code used to create our CNN model:
+## Implementation of CNN into our project
 ```py
 model.add(Conv2D(16, (3, 3), 1, activation = "relu", input_shape = (256, 256, 3)))
 model.add(MaxPooling2D())
