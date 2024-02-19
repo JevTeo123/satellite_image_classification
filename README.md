@@ -12,10 +12,10 @@
 The purpose of this project is to classify images taken from a satellite into 4 respective categories (cloudy, desert, green_area and water), through the use of a convolutional Neural Network (CNN).
 
 ### Built With
-![image](https://github.com/JevTeo123/satellite_image_classification/assets/123255675/dea8b062-0d3c-4570-821c-927b631beefd){: width="200"}
-![image](https://github.com/JevTeo123/satellite_image_classification/assets/123255675/4232b983-6f1a-4e81-bd42-46308b39009b){: width="200"}
-![image](https://github.com/JevTeo123/satellite_image_classification/assets/123255675/d0883df7-26f5-4685-b4bc-a275c1d64d47){: width="200"}
-![image](https://github.com/JevTeo123/satellite_image_classification/assets/123255675/76f4c7e2-26f9-489a-9cdb-cac182552bd8){: width="200"}
+<img src = "https://github.com/JevTeo123/satellite_image_classification/assets/123255675/dea8b062-0d3c-4570-821c-927b631beefd" width = "200">
+<img src = "https://github.com/JevTeo123/satellite_image_classification/assets/123255675/4232b983-6f1a-4e81-bd42-46308b39009b" width="200">
+<img src = "https://github.com/JevTeo123/satellite_image_classification/assets/123255675/d0883df7-26f5-4685-b4bc-a275c1d64d47" width="200">
+<img src = "https://github.com/JevTeo123/satellite_image_classification/assets/123255675/76f4c7e2-26f9-489a-9cdb-cac182552bd8" width="200">
 
 
 # Getting Started
