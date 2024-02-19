@@ -32,11 +32,11 @@ To preprocess the data, the ```py .numpy_iterator``` is used to convert the imag
 data = data.map(lambda x, y: (x/ 255, y))
 scaled_iterator = data.as_numpy_iterator()
 scaled_iterator.next()[0].max()
+```
 
 ## Train Test Split
 After Data Normalization, train test split is done to split the data into training, testing and validation data. The train data would be used to train the model on the data to predict the different categories of the target variable, the testing data would be used to test the model's accuracy on unseen data while the validation data is used to provide and unbiased evaluation of the model's performance and to fine tune the model's parameters. This is done through the code below:
 ```py
-
 train_size = int(len(data) * .7) (# 70 percent for training)
 val_size = int(len(data) *.2) + 1 (# 20 percent for validation)
 test_size = int(len(data) *.1) + 1 (# 10 percent for testing)
